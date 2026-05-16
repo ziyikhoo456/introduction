@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoo Zi Yi - Senior Java Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+            padding: 20px;
+        }
+        .resume {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            border-radius: 4px;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 4px 4px 0 0;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .header .title {
+            font-size: 16px;
+            font-weight: 300;
+            color: #bee3f8;
+            margin-bottom: 16px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 13px;
+            color: #e2e8f0;
+        }
+        .contact-info a {
+            color: #bee3f8;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 40px 50px;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #2b6cb0;
+            border-bottom: 2px solid #bee3f8;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .summary {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        .experience-item {
+            margin-bottom: 24px;
+        }
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+        .experience-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+        .experience-header .date {
+            font-size: 13px;
+            color: #718096;
+            font-weight: 500;
+        }
+        .experience-company {
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .experience-details {
+            list-style: none;
+            padding: 0;
+        }
+        .experience-details li {
+            font-size: 13.5px;
+            color: #4a5568;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        .experience-details li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        .skill-category h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 4px;
+        }
+        .skill-category p {
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .education-item h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+        .education-item .date {
+            font-size: 13px;
+            color: #718096;
+        }
+        .education-details {
+            font-size: 13px;
+            color: #4a5568;
+            margin-top: 4px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .tag {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .metrics {
+            display: inline-block;
+            background: #f0fff4;
+            color: #276749;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .cert-item, .lang-item {
+            font-size: 13px;
+            color: #4a5568;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .header {
+                border-radius: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+        @media (max-width: 600px) {
+            .header, .content {
+                padding: 24px;
+            }
+            .skills-grid, .two-col {
+                grid-template-columns: 1fr;
+            }
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <h1>KHOO ZI YI</h1>
+            <div class="title">Senior Java Engineer | Fintech & Cross-Border Payments | AI Engineering</div>
+            <div class="contact-info">
+                <span>+6012-543 8219</span>
+                <span>ziyikhoo456@hotmail.com</span>
+                <span><a href="https://www.linkedin.com/in/khoo-zi-yi-710572249">LinkedIn</a></span>
+                <span><a href="https://github.com/ziyikhoo456">GitHub</a></span>
+                <span>Malaysia</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <p class="summary">
+                    Senior Java Engineer with 2 years of experience at Ant International Group (Alipay+), specializing in high-traffic cross-border payment marketing systems and supplier integration platforms. Proven track record in building and maintaining marketing systems serving <strong>15M+ users</strong> with <strong>8,000+ daily traffic</strong> on cross-border homepage. Recently promoted to P10 for consistent high performance (3.5 → 3.75 ratings). Currently driving AI-powered development tooling and multi-vendor integration architecture. Strong background in distributed systems, campaign platforms, and AI-augmented software engineering workflows.
+                </p>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="section">
+                <div class="section-title">Work Experience</div>
+
+                <!-- Role 2: Current -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Java Engineer (P10) - Voyager Supply Team</h3>
+                        <span class="date">Mar 2026 - Present</span>
+                    </div>
+                    <div class="experience-company">Ant International Group (Alipay+), Kuala Lumpur</div>
+                    <ul class="experience-details">
+                        <li>Architected and implemented supplier integration platform enabling seamless onboarding of third-party vendors into the Alipay+ wallet ecosystem</li>
+                        <li>Designed multi-tenant integration framework supporting diverse supplier APIs, handling contract standardization and protocol adaptation</li>
+                        <li>Led wallet platform supply-side investment initiatives, coordinating cross-team deliverables across product, frontend, and vendor teams</li>
+                        <li>Pioneered AI-augmented development workflows, building custom AI Skills (MCP-based tooling) for automated system design, code generation, and integration testing — reducing development cycle time</li>
+                        <li>Developed reusable AI automation tools including SOFA RPC testing, DRM configuration management, and parameter center operations via natural language interfaces</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Supplier Integration</span>
+                        <span class="tag">AI Engineering</span>
+                        <span class="tag">MCP/Skills</span>
+                        <span class="tag">System Design</span>
+                        <span class="tag">Multi-tenant Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Role 1: Cross-border Marketing -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Java Engineer (P9) - CN Cross-Border Marketing Team</h3>
+                        <span class="date">Aug 2024 - Feb 2026</span>
+                    </div>
+                    <div class="experience-company">Ant International Group (Alipay+), Kuala Lumpur</div>
+                    <ul class="experience-details">
+                        <li>Built and maintained high-traffic cross-border marketing platform serving <strong>15M+ Chinese outbound users</strong> with daily homepage traffic of <strong>8,000+ requests</strong></li>
+                        <li>Owned end-to-end delivery of per-transaction discount (笔笔减) marketing campaigns including referral programs (人传人), promotional lottery events, cumulative spending promotions, and targeted push notification systems</li>
+                        <li>Designed and implemented viral referral system enabling user-to-user invitation mechanics with real-time reward distribution and anti-fraud validation</li>
+                        <li>Developed campaign management platform for large-scale promotional events (Double 11, CNY) handling high concurrency with graceful degradation strategies</li>
+                        <li>Built intelligent marketing push system with user segmentation, timing optimization, and A/B testing capabilities</li>
+                        <li>Achieved performance ratings of <strong>3.5 (2024)</strong> and <strong>3.75 (2025)</strong>, resulting in promotion from P9 to P10</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Cross-Border Payments</span>
+                        <span class="tag">Marketing Platform</span>
+                        <span class="tag">High Concurrency</span>
+                        <span class="tag">Campaign Systems</span>
+                        <span class="tag">Push Notification</span>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>IT Intern</h3>
+                        <span class="date">Oct 2022 - Jan 2023</span>
+                    </div>
+                    <div class="experience-company">Boston Scientific Medical Device (Malaysia) Sdn. Bhd.</div>
+                    <ul class="experience-details">
+                        <li>Conducted WiFi Onsite survey, delivering project 50% ahead of schedule</li>
+                        <li>Developed 3 Power Apps (Referral, Survey, Request Tracking) improving operational efficiency by 20-30%</li>
+                        <li>Built SharePoint site for Finance department, reducing processing time by 30%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <div class="section-title">Technical Skills</div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Backend & Frameworks</h4>
+                        <p>Java, Spring Boot, SOFA (Ant Stack), SOFABoot, MyBatis, SOFA RPC/TR</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Distributed Systems</h4>
+                        <p>Distributed Transactions, Message Queues, DRM Configuration, Service Mesh</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases & Middleware</h4>
+                        <p>MySQL, OB (OceanBase), Redis, Tair, ElasticSearch</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & Tooling</h4>
+                        <p>AI Skills/MCP Development, LLM Integration, Prompt Engineering, Claude Code, Qoder</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps & Cloud</h4>
+                        <p>Alibaba Cloud, Docker, CI/CD, Git, Maven, Monitoring & Alerting</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <p>Java (Expert), Python, JavaScript, C++, PHP</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="experience-item">
+                    <div class="education-item">
+                        <h3>Bachelor of Computer Science (Honours with Distinction)</h3>
+                        <span class="date">Jun 2021 - Jun 2024</span>
+                    </div>
+                    <div class="education-details">
+                        <p>Universiti Tunku Abdul Rahman (UTAR) &nbsp;|&nbsp; CGPA: 3.89 &nbsp;|&nbsp; President's List (6/9 semesters)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications & Additional -->
+            <div class="section">
+                <div class="section-title">Certifications & Additional</div>
+                <div class="two-col">
+                    <div>
+                        <div class="skill-category">
+                            <h4>Certifications</h4>
+                            <p class="cert-item">Alibaba Cloud Certified Professional</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <p class="lang-item">Chinese (Fluent), English (Professional), Malay (Conversational)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skill-category">
+                            <h4>Achievements</h4>
+                            <p class="cert-item">8th place - APU Battle-Of-Hackers 2022</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Leadership</h4>
+                            <p class="cert-item">Vice Chairperson, UTAR Kampar Aikido Club (2022-2023)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
