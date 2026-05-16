@@ -5,13 +5,13 @@ export function initTyping() {
 
   const phrasesByLang = {
     en: [
-      'Senior Java Engineer',
+      'Java Engineer',
       'Fintech & Cross-Border Payments',
       'AI Tooling Builder',
       'Distributed Systems Architect'
     ],
     cn: [
-      '高级Java工程师',
+      'Java工程师',
       '金融科技 & 跨境支付',
       'AI工具开发者',
       '分布式系统架构师'
