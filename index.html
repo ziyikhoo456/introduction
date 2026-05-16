@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khoo Zi Yi - Senior Java Engineer at Ant International Group. Specializing in fintech, cross-border payments, and AI engineering.">
+    <meta property="og:title" content="Khoo Zi Yi | Senior Java Engineer">
+    <meta property="og:description" content="Portfolio - Fintech, Cross-Border Payments, AI Engineering">
+    <title>Khoo Zi Yi | Senior Java Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/skills.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo"><span>ZY</span>.dev</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+                <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="#education" class="nav-link" data-i18n="nav.education">Education</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="cn">中</button>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="nav-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+
+                <!-- Hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+        <a href="#education" class="nav-link" data-i18n="nav.education">Education</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</p>
+            <h1 class="hero-name" data-i18n="hero.name">Khoo Zi Yi</h1>
+            <div class="hero-typing-container">
+                <span class="hero-typing" id="typingText"></span>
+            </div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Get In Touch</a>
+                <a href="#experience" class="btn btn-outline" data-i18n="hero.cta2">View Experience</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse"></div>
+            <span data-i18n="hero.scroll">Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header" data-reveal="fade-up">
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Building the future of cross-border payments</p>
+            </div>
+
+            <div data-reveal="fade-up" data-reveal-delay="200">
+                <p class="summary-text" style="text-align:center; max-width:750px; margin:0 auto 48px; font-size:1.05rem; line-height:1.9;" data-i18n-html="about.summary">
+                    Senior Java Engineer at <strong>Ant International Group (Alipay+)</strong> with proven expertise in high-traffic cross-border payment marketing systems. Successfully built and maintained platforms serving <strong>15M+ users</strong> with mission-critical reliability. Recently promoted to P10 for consistently high performance. Currently pioneering <strong>AI-augmented development workflows</strong> and leading supplier integration architecture for the Alipay+ wallet ecosystem.
+                </p>
+            </div>
+
+            <!-- Counter Cards -->
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+                <div class="glass-card counter-card" data-reveal="scale" data-reveal-delay="100">
+                    <div class="counter-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="counter-value" data-count-to="15" data-count-suffix="M+">0</div>
+                    <div class="counter-label" data-i18n="about.counter1">Users Served</div>
+                </div>
+
+                <div class="glass-card counter-card" data-reveal="scale" data-reveal-delay="200">
+                    <div class="counter-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <div class="counter-value" data-count-to="8000" data-count-suffix="+">0</div>
+                    <div class="counter-label" data-i18n="about.counter2">Daily Traffic</div>
+                </div>
+
+                <div class="glass-card counter-card" data-reveal="scale" data-reveal-delay="300">
+                    <div class="counter-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    </div>
+                    <div class="counter-value" data-count-to="3.75" data-count-suffix="">0</div>
+                    <div class="counter-label" data-i18n="about.counter3">Performance Rating</div>
+                </div>
+
+                <div class="glass-card counter-card" data-reveal="scale" data-reveal-delay="400">
+                    <div class="counter-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="counter-value" data-count-to="10" data-count-suffix="" data-count-prefix="P">0</div>
+                    <div class="counter-label" data-i18n="about.counter4">Engineer Level</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header" data-reveal="fade-up">
+                <h2 class="section-title" data-i18n="exp.title">Experience</h2>
+                <p class="section-subtitle" data-i18n="exp.subtitle">My professional journey</p>
+            </div>
+
+            <div class="timeline" data-reveal="fade-up" data-reveal-delay="200">
+                <!-- Current Role -->
+                <div class="timeline-item current">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-role" data-i18n="exp.role1.title">Java Engineer (P10) - Voyager Supply Team</div>
+                                <div class="timeline-company">Ant International Group (Alipay+)</div>
+                            </div>
+                            <span class="timeline-date" data-i18n="exp.role1.date">Mar 2026 - Present</span>
+                            <svg class="timeline-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="timeline-details">
+                            <ul data-i18n-html="exp.role1.details">
+                                <li>Architected supplier integration platform enabling seamless onboarding of third-party vendors into the Alipay+ wallet ecosystem</li>
+                                <li>Designed multi-tenant integration framework supporting diverse supplier APIs with contract standardization and protocol adaptation</li>
+                                <li>Led wallet platform supply-side investment initiatives, coordinating cross-team deliverables</li>
+                                <li>Pioneered AI-augmented development workflows, building custom AI Skills (MCP-based tooling) for automated system design, code generation, and integration testing</li>
+                                <li>Developed reusable AI automation tools including SOFA RPC testing, DRM configuration management, and parameter center operations</li>
+                            </ul>
+                            <div class="tags-container">
+                                <span class="tag">Supplier Integration</span>
+                                <span class="tag">AI Engineering</span>
+                                <span class="tag">MCP/Skills</span>
+                                <span class="tag">System Design</span>
+                                <span class="tag">Multi-tenant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Role -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-role" data-i18n="exp.role2.title">Java Engineer (P9) - CN Cross-Border Marketing</div>
+                                <div class="timeline-company">Ant International Group (Alipay+)</div>
+                            </div>
+                            <span class="timeline-date" data-i18n="exp.role2.date">Aug 2024 - Feb 2026</span>
+                            <svg class="timeline-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="timeline-details">
+                            <ul data-i18n-html="exp.role2.details">
+                                <li>Built high-traffic cross-border marketing platform serving 15M+ Chinese outbound users with 8,000+ daily traffic</li>
+                                <li>Owned end-to-end delivery of per-transaction discount campaigns including referral programs, promotional lottery events, and cumulative spending promotions</li>
+                                <li>Designed viral referral system enabling user-to-user invitation with real-time reward distribution and anti-fraud validation</li>
+                                <li>Developed campaign management platform for large-scale promotional events (Double 11, CNY) with high concurrency and graceful degradation</li>
+                                <li>Built intelligent marketing push system with user segmentation, timing optimization, and A/B testing</li>
+                                <li>Achieved performance ratings of 3.5 (2024) and 3.75 (2025), resulting in promotion from P9 to P10</li>
+                            </ul>
+                            <div class="tags-container">
+                                <span class="tag">Cross-Border Payments</span>
+                                <span class="tag">Marketing Platform</span>
+                                <span class="tag">High Concurrency</span>
+                                <span class="tag">Campaign Systems</span>
+                                <span class="tag">Push Notification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-role" data-i18n="exp.role3.title">IT Intern</div>
+                                <div class="timeline-company">Boston Scientific Medical Device (Malaysia)</div>
+                            </div>
+                            <span class="timeline-date" data-i18n="exp.role3.date">Oct 2022 - Jan 2023</span>
+                            <svg class="timeline-expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="timeline-details">
+                            <ul data-i18n-html="exp.role3.details">
+                                <li>Conducted WiFi Onsite survey, delivering project 50% ahead of schedule</li>
+                                <li>Developed 3 Power Apps (Referral, Survey, Request Tracking) improving operational efficiency by 20-30%</li>
+                                <li>Built SharePoint site for Finance department, reducing processing time by 30%</li>
+                            </ul>
+                            <div class="tags-container">
+                                <span class="tag">Power Apps</span>
+                                <span class="tag">SharePoint</span>
+                                <span class="tag">IT Infrastructure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header" data-reveal="fade-up">
+                <h2 class="section-title" data-i18n="skills.title">Technical Skills</h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">Technologies I work with daily</p>
+            </div>
+
+            <div class="skills-container">
+                <!-- Radar Chart -->
+                <div class="radar-chart-container" data-reveal="fade-right">
+                    <canvas class="radar-canvas" id="radarChart"></canvas>
+                    <div class="skill-categories">
+                        <div class="skill-cat">
+                            <h4 data-i18n="skills.cat1.title">Backend</h4>
+                            <p data-i18n="skills.cat1.desc">Java, Spring Boot, SOFA Stack, MyBatis</p>
+                        </div>
+                        <div class="skill-cat">
+                            <h4 data-i18n="skills.cat2.title">Distributed</h4>
+                            <p data-i18n="skills.cat2.desc">MQ, DRM, Service Mesh, Transactions</p>
+                        </div>
+                        <div class="skill-cat">
+                            <h4 data-i18n="skills.cat3.title">Databases</h4>
+                            <p data-i18n="skills.cat3.desc">MySQL, OceanBase, Redis, Tair, ES</p>
+                        </div>
+                        <div class="skill-cat">
+                            <h4 data-i18n="skills.cat4.title">AI & Tooling</h4>
+                            <p data-i18n="skills.cat4.desc">MCP, AI Skills, LLM, Prompt Eng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bars -->
+                <div class="skills-bars" data-reveal="fade-left">
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar1">Java & Spring Ecosystem</span>
+                            <span class="skill-bar-percent">95%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar2">Distributed Systems</span>
+                            <span class="skill-bar-percent">90%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar3">AI Engineering & MCP</span>
+                            <span class="skill-bar-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar4">System Architecture</span>
+                            <span class="skill-bar-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar5">Databases & Caching</span>
+                            <span class="skill-bar-percent">80%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-item">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name" data-i18n="skills.bar6">DevOps & Cloud</span>
+                            <span class="skill-bar-percent">75%</span>
+                        </div>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header" data-reveal="fade-up">
+                <h2 class="section-title" data-i18n="edu.title">Education</h2>
+                <p class="section-subtitle" data-i18n="edu.subtitle">Academic background</p>
+            </div>
+
+            <div style="max-width:650px; margin:0 auto;" data-reveal="scale" data-reveal-delay="200">
+                <div class="glass-card" style="text-align:center;">
+                    <h3 style="margin-bottom:4px;" data-i18n="edu.degree">Bachelor of Computer Science (Honours with Distinction)</h3>
+                    <p style="color:var(--accent-2); font-weight:600; margin-bottom:16px;" data-i18n="edu.university">Universiti Tunku Abdul Rahman (UTAR)</p>
+                    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;" data-i18n="edu.duration">June 2021 - June 2024</p>
+
+                    <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+                        <div class="tag" style="padding:8px 16px; font-size:0.85rem;">CGPA: 3.89</div>
+                        <div class="tag" style="padding:8px 16px; font-size:0.85rem;" data-i18n="edu.badge1">President's List (6x)</div>
+                        <div class="tag" style="padding:8px 16px; font-size:0.85rem;" data-i18n="edu.badge2">Alibaba Cloud Certified</div>
+                        <div class="tag" style="padding:8px 16px; font-size:0.85rem;" data-i18n="edu.badge3">Hackathon 8th Place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header" data-reveal="fade-up">
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Let's connect and discuss opportunities</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; max-width:800px; margin:0 auto;">
+                <a href="mailto:ziyikhoo456@hotmail.com" class="glass-card contact-card" data-reveal="fade-up" data-reveal-delay="100">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="contact.email.label">Email</div>
+                        <div class="contact-value">ziyikhoo456@hotmail.com</div>
+                    </div>
+                </a>
+
+                <a href="tel:+60125438219" class="glass-card contact-card" data-reveal="fade-up" data-reveal-delay="200">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label" data-i18n="contact.phone.label">Phone</div>
+                        <div class="contact-value">+6012-543 8219</div>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/khoo-zi-yi-710572249" target="_blank" class="glass-card contact-card" data-reveal="fade-up" data-reveal-delay="300">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">Khoo Zi Yi</div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/ziyikhoo456" target="_blank" class="glass-card contact-card" data-reveal="fade-up" data-reveal-delay="400">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">ziyikhoo456</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding:40px 20px; border-top:1px solid var(--glass-border);">
+        <p style="font-size:0.85rem; color:var(--text-muted);">
+            <span data-i18n="footer.built">Built with vanilla HTML, CSS & JavaScript</span> &mdash; <span data-i18n="footer.copy">&copy; 2026 Khoo Zi Yi</span>
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

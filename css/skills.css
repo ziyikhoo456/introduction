@@ -1,0 +1,132 @@
+/* Skills Section */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Radar Chart */
+.radar-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radar-canvas {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1;
+}
+
+/* Progress Bars */
+.skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-bar-item {
+  width: 100%;
+}
+
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-bar-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.skill-bar-percent {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  font-family: var(--font-mono);
+}
+
+.skill-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--bar-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.skill-bar-fill.animated {
+  /* Width set by JS */
+}
+
+.skill-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Skill categories below radar */
+.skill-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.skill-cat {
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-fast);
+}
+
+.skill-cat:hover {
+  border-color: var(--accent-2);
+  transform: translateY(-2px);
+}
+
+.skill-cat h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-2);
+  margin-bottom: 4px;
+}
+
+.skill-cat p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .radar-canvas {
+    max-width: 280px;
+  }
+  .skill-categories {
+    grid-template-columns: 1fr;
+  }
+}

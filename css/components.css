@@ -1,0 +1,179 @@
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--glass-shadow);
+  padding: 32px;
+  transition: all var(--transition-normal);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-2);
+}
+
+/* Tags / Badges */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 20px;
+  background: var(--bg-tertiary);
+  color: var(--accent-2);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-fast);
+}
+
+.tag:hover {
+  background: var(--accent-2);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Counter Card */
+.counter-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.counter-card .counter-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+}
+
+.counter-card .counter-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.counter-value {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-2);
+  color: var(--accent-2);
+}
+
+.btn-outline:hover {
+  background: var(--accent-2);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  cursor: pointer;
+}
+
+.contact-card .contact-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+  color: var(--accent-2);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.contact-card:hover .contact-icon {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.contact-card .contact-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.contact-card .contact-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Language Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--bg-tertiary);
+  border-radius: 20px;
+  padding: 3px;
+  border: 1px solid var(--glass-border);
+}
+
+.lang-btn {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 16px;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.lang-btn.active {
+  background: var(--accent-2);
+  color: #ffffff;
+}
